@@ -33,9 +33,10 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label telefonoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             System.Windows.Forms.Label correoElectronicoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.listaClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -53,9 +54,10 @@
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.correoElectronicoTextBox = new System.Windows.Forms.TextBox();
             this.listaClientesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,13 +71,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).BeginInit();
             this.listaClientesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // direcionLabel
             // 
             direcionLabel.AutoSize = true;
-            direcionLabel.Location = new System.Drawing.Point(74, 185);
+            direcionLabel.Location = new System.Drawing.Point(338, 203);
             direcionLabel.Name = "direcionLabel";
             direcionLabel.Size = new System.Drawing.Size(49, 13);
             direcionLabel.TabIndex = 3;
@@ -84,7 +87,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(74, 106);
+            idLabel.Location = new System.Drawing.Point(338, 116);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 5;
@@ -93,7 +96,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(74, 143);
+            nombreLabel.Location = new System.Drawing.Point(338, 154);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 7;
@@ -102,11 +105,20 @@
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(74, 230);
+            telefonoLabel.Location = new System.Drawing.Point(338, 240);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(52, 13);
             telefonoLabel.TabIndex = 9;
             telefonoLabel.Text = "Telefono:";
+            // 
+            // correoElectronicoLabel
+            // 
+            correoElectronicoLabel.AutoSize = true;
+            correoElectronicoLabel.Location = new System.Drawing.Point(338, 283);
+            correoElectronicoLabel.Name = "correoElectronicoLabel";
+            correoElectronicoLabel.Size = new System.Drawing.Size(97, 13);
+            correoElectronicoLabel.TabIndex = 11;
+            correoElectronicoLabel.Text = "Correo Electronico:";
             // 
             // listaClientesBindingNavigator
             // 
@@ -135,9 +147,14 @@
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(667, 25);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(797, 25);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaClientesBindingSource
+            // 
+            this.listaClientesBindingSource.AllowNew = false;
+            this.listaClientesBindingSource.DataSource = typeof(BL.Seguridad.Cliente);
             // 
             // bindingNavigatorCountItem
             // 
@@ -249,74 +266,78 @@
             // direcionTextBox
             // 
             this.direcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Direcion", true));
-            this.direcionTextBox.Location = new System.Drawing.Point(147, 182);
+            this.direcionTextBox.Location = new System.Drawing.Point(453, 199);
             this.direcionTextBox.Name = "direcionTextBox";
-            this.direcionTextBox.Size = new System.Drawing.Size(249, 20);
+            this.direcionTextBox.Size = new System.Drawing.Size(236, 20);
             this.direcionTextBox.TabIndex = 4;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(147, 99);
+            this.idTextBox.Location = new System.Drawing.Point(453, 116);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(249, 20);
+            this.idTextBox.Size = new System.Drawing.Size(236, 20);
             this.idTextBox.TabIndex = 6;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(147, 136);
+            this.nombreTextBox.Location = new System.Drawing.Point(453, 154);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(249, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(236, 20);
             this.nombreTextBox.TabIndex = 8;
             // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(147, 223);
+            this.telefonoTextBox.Location = new System.Drawing.Point(453, 240);
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(249, 20);
+            this.telefonoTextBox.Size = new System.Drawing.Size(236, 20);
             this.telefonoTextBox.TabIndex = 10;
             // 
-            // listaClientesBindingSource
+            // pictureBox1
             // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.Seguridad.Cliente);
-            // 
-            // correoElectronicoLabel
-            // 
-            correoElectronicoLabel.AutoSize = true;
-            correoElectronicoLabel.Location = new System.Drawing.Point(74, 270);
-            correoElectronicoLabel.Name = "correoElectronicoLabel";
-            correoElectronicoLabel.Size = new System.Drawing.Size(97, 13);
-            correoElectronicoLabel.TabIndex = 10;
-            correoElectronicoLabel.Text = "Correo Electronico:";
+            this.pictureBox1.Image = global::ARYA.Properties.Resources.clientes;
+            this.pictureBox1.Location = new System.Drawing.Point(85, 116);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 183);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // correoElectronicoTextBox
             // 
             this.correoElectronicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "CorreoElectronico", true));
-            this.correoElectronicoTextBox.Location = new System.Drawing.Point(147, 286);
+            this.correoElectronicoTextBox.Location = new System.Drawing.Point(453, 280);
             this.correoElectronicoTextBox.Name = "correoElectronicoTextBox";
-            this.correoElectronicoTextBox.Size = new System.Drawing.Size(249, 20);
-            this.correoElectronicoTextBox.TabIndex = 11;
+            this.correoElectronicoTextBox.Size = new System.Drawing.Size(236, 20);
+            this.correoElectronicoTextBox.TabIndex = 12;
             // 
             // listaClientesDataGridView
             // 
             this.listaClientesDataGridView.AutoGenerateColumns = false;
-            this.listaClientesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.listaClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaClientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.listaClientesDataGridView.DataSource = this.listaClientesBindingSource;
-            this.listaClientesDataGridView.Location = new System.Drawing.Point(53, 315);
+            this.listaClientesDataGridView.Location = new System.Drawing.Point(85, 334);
             this.listaClientesDataGridView.Name = "listaClientesDataGridView";
-            this.listaClientesDataGridView.Size = new System.Drawing.Size(495, 215);
-            this.listaClientesDataGridView.TabIndex = 11;
+            this.listaClientesDataGridView.Size = new System.Drawing.Size(700, 220);
+            this.listaClientesDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -329,12 +350,14 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Direcion";
             this.dataGridViewTextBoxColumn4.HeaderText = "Direcion";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "CorreoElectronico";
             this.dataGridViewTextBoxColumn5.HeaderText = "CorreoElectronico";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -343,22 +366,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 38);
+            this.label1.Location = new System.Drawing.Point(320, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(362, 33);
+            this.label1.Size = new System.Drawing.Size(129, 33);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Ingrese un nuevo Cliente";
+            this.label1.Text = "Clientes";
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(667, 554);
+            this.BackgroundImage = global::ARYA.Properties.Resources.WhatsApp_Image_2019_11_02_at_11_01_15_PM;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(797, 576);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listaClientesDataGridView);
             this.Controls.Add(correoElectronicoLabel);
             this.Controls.Add(this.correoElectronicoTextBox);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(direcionLabel);
             this.Controls.Add(this.direcionTextBox);
             this.Controls.Add(idLabel);
@@ -375,6 +400,7 @@
             this.listaClientesBindingNavigator.ResumeLayout(false);
             this.listaClientesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -402,12 +428,14 @@
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox correoElectronicoTextBox;
         private System.Windows.Forms.DataGridView listaClientesDataGridView;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -11,6 +11,7 @@ namespace BL.Seguridad
      public class ClientesBL
     {
         Contexto _contexto;
+
         public BindingList<Cliente> ListaClientes { get; set; }
 
         public ClientesBL()
@@ -35,6 +36,15 @@ namespace BL.Seguridad
 
             resultado.Exitoso = true;
             return resultado;
+        }
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
         }
 
 
@@ -113,5 +123,10 @@ namespace BL.Seguridad
         public string CorreoElectronico { get; set; }
 
 
+    }
+    public class Resultado
+    {
+        public bool Exitoso { get; set; }
+        public string Mensaje { get; set; }
     }
 }

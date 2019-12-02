@@ -8,20 +8,18 @@ using System.Threading.Tasks;
 
 namespace BL.Seguridad
 {
-    public class NuevoTBL
-
+   public class TecnicosBL
     {
+        Contexto _contexto;
 
-        Contexto _contexto; 
+        public BindingList<Tecnico> ListaTecnicos { get; set; }
 
-        public BindingList<Tecnico> ListaTecnicos { get; set; } 
 
-        public NuevoTBL()
+
+        public TecnicosBL()
         {
             _contexto = new Contexto();
             ListaTecnicos = new BindingList<Tecnico>();
-
-   
         }
 
         public BindingList<Tecnico> SeleccionarTecnico()
@@ -58,6 +56,7 @@ namespace BL.Seguridad
         public void AgregarTecnico()
         {
             var nuevoTecnico = new Tecnico();
+
             ListaTecnicos.Add(nuevoTecnico);
         }
 
@@ -71,7 +70,7 @@ namespace BL.Seguridad
                     _contexto.SaveChanges();
                     return true;
                 }
-            
+
 
             }
 
@@ -105,32 +104,28 @@ namespace BL.Seguridad
             return resultado;
         }
 
-           
-        }
-
-
-        public class Tecnico
-        {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
-            public string Direccion { get; set; }
-            public string Telefono { get; set; }
-            public byte[] Foto { get; set; }
-            public int TipoId { get; set; }
-            public Tipo Tipo { get; set; }
-
-
 
     }
 
-    public class Resultado
+
+    public class Tecnico
     {
-        public bool Exitoso { get; set; }
-        public string Mensaje { get; set; }
-    }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public string CorreoElectronico { get; set; }
+        public byte[] Foto { get; set; }
+
+
+
 
     }
+}
 
+
+
+   
 
 
 

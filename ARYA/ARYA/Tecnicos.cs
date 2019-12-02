@@ -14,54 +14,19 @@ namespace ARYA
 {
     public partial class Tecnicos : Form
     {
-        NuevoTBL _tecnico;
-        TiposBL _tiposBL;
+        TecnicosBL _tecnicosBL;
         public Tecnicos()
         {
+            
             InitializeComponent();
-            _tecnico = new NuevoTBL();
-            listaTecnicosBindingSource.DataSource = _tecnico.SeleccionarTecnico();
+            _tecnicosBL = new TecnicosBL();
+            listaTecnicosBindingSource.DataSource = _tecnicosBL.SeleccionarTecnico();
 
-            _tiposBL = new TiposBL();
-            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
-        }
-
-        private void Tecnicos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listaTecnicosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            listaTecnicosBindingSource.EndEdit();
-            var tecnico = (Tecnico)listaTecnicosBindingSource.Current;
-
-            if (fotoPictureBox.Image != null)
-            {
-                tecnico.Foto = Program.imagetoByteArray(fotoPictureBox.Image);
-            }
-            else
-            {
-                tecnico.Foto = null;
-            }
-
-            var resultado = _tecnico.GuardarTecnico(tecnico);
-
-            if (resultado.Exitoso == true)
-            {
-                listaTecnicosBindingSource.ResetBindings(false);
-                DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Tecnico guardado");
-            }
-            else
-            {
-                MessageBox.Show(resultado.Mensaje);
-            }
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            _tecnico.AgregarTecnico();
+            _tecnicosBL.AgregarTecnico();
             listaTecnicosBindingSource.MoveLast();
 
             DeshabilitarHabilitarBotones(false);
@@ -81,6 +46,35 @@ namespace ARYA
 
         }
 
+        private void listaTecnicosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            listaTecnicosBindingSource.EndEdit();
+
+            var tecnico = (Tecnico)listaTecnicosBindingSource.Current;
+
+            if (fotoPictureBox.Image != null)
+            {
+                tecnico.Foto = Program.imagetoByteArray(fotoPictureBox.Image);
+            }
+            else
+            {
+                tecnico.Foto = null;
+            }
+
+            var resultado = _tecnicosBL.GuardarTecnico(tecnico);
+
+            if (resultado.Exitoso == true)
+            {
+                listaTecnicosBindingSource.ResetBindings(false);
+                DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Tecnico guardado");
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+        }
+
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (idTextBox.Text != "")
@@ -98,7 +92,7 @@ namespace ARYA
         private void Eliminar(int id)
         {
 
-            var resultado = _tecnico.EliminarTecnico(id);
+            var resultado = _tecnicosBL.EliminarTecnico(id);
 
             if (resultado == true)
             {
@@ -106,37 +100,19 @@ namespace ARYA
             }
             else
             {
-                MessageBox.Show("Ocurrio un error al eliminar el producto");
+                MessageBox.Show("Ocurrio un error al eliminar ");
             }
         }
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
-            
+
+            _tecnicosBL.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            
-        }
-
-        private void listaTecnicosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fotoLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
             var tecnico = (Tecnico)listaTecnicosBindingSource.Current;
 
             if (tecnico != null)
@@ -162,61 +138,11 @@ namespace ARYA
         private void button2_Click(object sender, EventArgs e)
         {
             fotoPictureBox.Image = null;
-
         }
 
-        private void tipoIdLabel_Click(object sender, EventArgs e)
+        private void idTextBox_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void tipoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tipoIdLabel_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tipoIdComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fotoPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            listaTecnicosBindingSource.EndEdit();
-            var tecnico = (Tecnico)listaTecnicosBindingSource.Current;
-
-            if (fotoPictureBox.Image != null)
-            {
-                tecnico.Foto = Program.imagetoByteArray(fotoPictureBox.Image);
-            }
-            else
-            {
-                tecnico.Foto = null;
-            }
-
-            var resultado = _tecnico.GuardarTecnico(tecnico);
-
-            if (resultado.Exitoso == true)
-            {
-                listaTecnicosBindingSource.ResetBindings(false);
-                DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Tecnico guardado");
-            }
-            else
-            {
-                MessageBox.Show(resultado.Mensaje);
-            }
         }
     }
 }
-

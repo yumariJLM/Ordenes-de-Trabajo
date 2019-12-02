@@ -73,6 +73,16 @@ namespace ARYA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banner_soporte_tecnico {
+            get {
+                object obj = ResourceManager.GetObject("banner_soporte-tecnico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brnentar {
             get {
                 object obj = ResourceManager.GetObject("brnentar", resourceCulture);
@@ -86,6 +96,26 @@ namespace ARYA.Properties {
         internal static System.Drawing.Bitmap ca {
             get {
                 object obj = ResourceManager.GetObject("ca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clientes {
+            get {
+                object obj = ResourceManager.GetObject("clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gjh {
+            get {
+                object obj = ResourceManager.GetObject("gjh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

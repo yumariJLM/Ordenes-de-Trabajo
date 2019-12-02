@@ -93,15 +93,16 @@ namespace ARYA
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            _clientes.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
         }
 
-        private void listaClientesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Clientes_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Clientes_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

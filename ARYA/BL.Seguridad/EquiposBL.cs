@@ -17,16 +17,43 @@ namespace BL.Seguridad
         public EquiposBL()
         {
             _contexto = new Contexto();
-            ListaEquipos = new BindingList<Equipo>();
         }
-
-        public BindingList<Equipo> ObtenerProductos()
+        public BindingList<Equipo> ObtenerEquipos() 
         {
-            _contexto.Equipos.Load();
-
+            _contexto.Equipos.Include("DetallesEquipo").Load();
             ListaEquipos = _contexto.Equipos.Local.ToBindingList();
+
             return ListaEquipos;
         }
+
+        public void AgregarEquipo()
+        {
+            var nuevoEquipo = new Equipo();
+            ListaEquipos.Add(nuevoEquipo);
+        }
+
+
+        public void RemoverDetallesEquipo(Equipo equipo, DetallesEquipo detallesEquipo)
+        {
+            if (equipo !=null && detallesEquipo != null )
+            {
+                equipo.DetallesEquipo.Remove(detallesEquipo);
+
+            }
+        }
+
+
+
+        public void AgregarDetallesEquipo(Equipo equipo)
+        {
+            if (equipo!=null)
+            {
+                var nuevoDetalle = new DetallesEquipo();
+                equipo.DetallesEquipo.Add(nuevoDetalle);
+
+            }
+        }
+
 
 
         public void CancelarCambios()
@@ -38,106 +65,61 @@ namespace BL.Seguridad
             }
         }
 
-        //guardaR
-        public Resultado GuardarEquipo(Equipo equipo)
-        {
-            var resultado = Validar(equipo);
-            if (resultado.Exitoso == false)
-            {
-                return resultado;
-            }
 
-            _contexto.SaveChanges();
-
-            resultado.Exitoso = true;
-            return resultado;
-        }
-       
-
-
-        //agregar
-        public  void AgregarEquipo()
-        {
-            var nuevoEquipo = new Equipo();
-            ListaEquipos.Add(nuevoEquipo);
-        }
-
-        //elinimar
-        public bool EliminarProducto(int id)
-        {
-            foreach (var equipo in ListaEquipos)
-            {
-                if (equipo.Id == id)
-                {
-                    ListaEquipos.Remove( equipo);
-
-                    _contexto.SaveChanges();
-                    return true;
-                }
-
-            }
-
-            return false;
-        }
-
-
-        //Validaciones
-        private Resultado Validar(Equipo equipo)
+         public Resultado GuardarEquipo(Equipo equipo)
         {
             var resultado = new Resultado();
+           
+
             resultado.Exitoso = true;
-
-            if (string.IsNullOrEmpty(equipo.Marca) == true)
-            {
-                resultado.Mensaje = "Ingrese marca del equipo";
-                resultado.Exitoso = false;
-            }
-
-            else if (string.IsNullOrEmpty(equipo.Marca) == true)
-            {
-                resultado.Mensaje = "Por favor complete todos los datos del equipo";
-                resultado.Exitoso = false;
-            }
-
-            else if (string.IsNullOrEmpty(equipo.NoSerie) == true)
-            {
-                resultado.Mensaje = "Por favor complete todos los datos del equipo";
-                resultado.Exitoso = false;
-            }
-            else if (string.IsNullOrEmpty(equipo.Fallas) == true)
-            {
-                resultado.Mensaje = "Por favor complete todos los datos del equipo";
-                resultado.Exitoso = false;
-            }
-
-            if (equipo.TipoId == 0)
-            {
-                resultado.Mensaje = "Complete los campos";
-                resultado.Exitoso = false;
-
-            }
-
             return resultado;
         }
-}
+
+
+
+    }
+
 
     public class Equipo
     {
-
         public int Id { get; set; }
-        public DateTime Fecha { get; set; }
         public string NoSerie { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Fallas { get; set; }
         public bool Activo { get; set; }
-        public int TipoId { get; set; }
-        public Tipo Tipo { get; set; }
+        public byte[] Foto { get; set; }
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
-        public Byte[] Foto { get; set; }
+        public BindingList<DetallesEquipo> DetallesEquipo { get; set; }
         
 
-    }
-}
+        public double PrecioEstimado { get; set; }
 
+        public Equipo()
+        {
+           
+            DetallesEquipo = new BindingList<DetallesEquipo>();
+            Activo = true;
+        }
+    }
+
+    public class DetallesEquipo
+    {
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+        public int TecnicoId { get; set; }
+        public Tecnico Tecnico { get; set; }
+        public DateTime Fecha { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
+
+        public DetallesEquipo()
+        {
+            Fecha = DateTime.Now;
+        }
+
+    }
+
+
+}

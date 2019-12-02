@@ -1,6 +1,6 @@
 ﻿namespace ARYA
 {
-    partial class Nueva1
+    partial class OrdenesEquipos
     {
         /// <summary>
         /// Required designer variable.
@@ -34,13 +34,14 @@
             System.Windows.Forms.Label marcaLabel;
             System.Windows.Forms.Label modeloLabel;
             System.Windows.Forms.Label noSerieLabel;
-            System.Windows.Forms.Label label2;
-            System.Windows.Forms.Label fechaLabel;
+            System.Windows.Forms.Label precioEstimadoLabel;
             System.Windows.Forms.Label clienteIdLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nueva1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenesEquipos));
             this.listaEquiposBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.listaEquiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -49,121 +50,117 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaEquiposBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripCancelar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.fallasTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.modeloTextBox = new System.Windows.Forms.TextBox();
             this.noSerieTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.precioEstimadoTextBox = new System.Windows.Forms.TextBox();
+            this.detallesEquipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.detallesEquipoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.listaTecnicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
-            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
             fallasLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             modeloLabel = new System.Windows.Forms.Label();
             noSerieLabel = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            fechaLabel = new System.Windows.Forms.Label();
+            precioEstimadoLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaEquiposBindingNavigator)).BeginInit();
             this.listaEquiposBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaEquiposBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesEquipoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesEquipoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTecnicosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // fallasLabel
             // 
             fallasLabel.AutoSize = true;
-            fallasLabel.Location = new System.Drawing.Point(41, 312);
+            fallasLabel.Location = new System.Drawing.Point(114, 292);
             fallasLabel.Name = "fallasLabel";
             fallasLabel.Size = new System.Drawing.Size(37, 13);
-            fallasLabel.TabIndex = 1;
+            fallasLabel.TabIndex = 5;
             fallasLabel.Text = "Fallas:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(41, 125);
+            idLabel.Location = new System.Drawing.Point(112, 117);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 3;
+            idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
             // 
             // marcaLabel
             // 
             marcaLabel.AutoSize = true;
-            marcaLabel.Location = new System.Drawing.Point(41, 218);
+            marcaLabel.Location = new System.Drawing.Point(112, 143);
             marcaLabel.Name = "marcaLabel";
             marcaLabel.Size = new System.Drawing.Size(40, 13);
-            marcaLabel.TabIndex = 5;
+            marcaLabel.TabIndex = 9;
             marcaLabel.Text = "Marca:";
             // 
             // modeloLabel
             // 
             modeloLabel.AutoSize = true;
-            modeloLabel.Location = new System.Drawing.Point(41, 244);
+            modeloLabel.Location = new System.Drawing.Point(112, 190);
             modeloLabel.Name = "modeloLabel";
             modeloLabel.Size = new System.Drawing.Size(45, 13);
-            modeloLabel.TabIndex = 7;
+            modeloLabel.TabIndex = 11;
             modeloLabel.Text = "Modelo:";
             // 
             // noSerieLabel
             // 
             noSerieLabel.AutoSize = true;
-            noSerieLabel.Location = new System.Drawing.Point(41, 270);
+            noSerieLabel.Location = new System.Drawing.Point(112, 216);
             noSerieLabel.Name = "noSerieLabel";
             noSerieLabel.Size = new System.Drawing.Size(51, 13);
-            noSerieLabel.TabIndex = 9;
+            noSerieLabel.TabIndex = 13;
             noSerieLabel.Text = "No Serie:";
             // 
-            // label2
+            // precioEstimadoLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(41, 382);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(93, 13);
-            label2.TabIndex = 29;
-            label2.Text = "Estado del Equipo";
-            // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(457, 125);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(40, 13);
-            fechaLabel.TabIndex = 32;
-            fechaLabel.Text = "Fecha:";
+            precioEstimadoLabel.AutoSize = true;
+            precioEstimadoLabel.Location = new System.Drawing.Point(669, 594);
+            precioEstimadoLabel.Name = "precioEstimadoLabel";
+            precioEstimadoLabel.Size = new System.Drawing.Size(86, 13);
+            precioEstimadoLabel.TabIndex = 15;
+            precioEstimadoLabel.Text = "Precio Estimado:";
             // 
             // clienteIdLabel
             // 
             clienteIdLabel.AutoSize = true;
-            clienteIdLabel.Location = new System.Drawing.Point(38, 177);
+            clienteIdLabel.Location = new System.Drawing.Point(114, 254);
             clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(54, 13);
-            clienteIdLabel.TabIndex = 33;
-            clienteIdLabel.Text = "Cliente Id:";
+            clienteIdLabel.Size = new System.Drawing.Size(39, 13);
+            clienteIdLabel.TabIndex = 19;
+            clienteIdLabel.Text = "Cliente";
             // 
             // listaEquiposBindingNavigator
             // 
-            this.listaEquiposBindingNavigator.AddNewItem = null;
+            this.listaEquiposBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.listaEquiposBindingNavigator.BindingSource = this.listaEquiposBindingSource;
             this.listaEquiposBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.listaEquiposBindingNavigator.DeleteItem = null;
+            this.listaEquiposBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.listaEquiposBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -177,7 +174,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.listaEquiposBindingNavigatorSaveItem,
-            this.toolStripCancelar});
+            this.toolStripButtonCancelar});
             this.listaEquiposBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.listaEquiposBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.listaEquiposBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -185,9 +182,19 @@
             this.listaEquiposBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaEquiposBindingNavigator.Name = "listaEquiposBindingNavigator";
             this.listaEquiposBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaEquiposBindingNavigator.Size = new System.Drawing.Size(740, 25);
+            this.listaEquiposBindingNavigator.Size = new System.Drawing.Size(902, 25);
             this.listaEquiposBindingNavigator.TabIndex = 0;
             this.listaEquiposBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // listaEquiposBindingSource
             // 
@@ -199,6 +206,15 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -260,26 +276,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
             // listaEquiposBindingNavigatorSaveItem
             // 
             this.listaEquiposBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -289,133 +285,156 @@
             this.listaEquiposBindingNavigatorSaveItem.Text = "Guardar datos";
             this.listaEquiposBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaEquiposBindingNavigatorSaveItem_Click);
             // 
-            // toolStripCancelar
+            // toolStripButtonCancelar
             // 
-            this.toolStripCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCancelar.Image")));
-            this.toolStripCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripCancelar.Name = "toolStripCancelar";
-            this.toolStripCancelar.Size = new System.Drawing.Size(57, 22);
-            this.toolStripCancelar.Text = "Cancelar";
-            this.toolStripCancelar.Visible = false;
-            this.toolStripCancelar.Click += new System.EventHandler(this.toolStripCancelar_Click);
+            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
+            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Text = "Cancelar";
+            this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
             // fallasTextBox
             // 
             this.fallasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEquiposBindingSource, "Fallas", true));
-            this.fallasTextBox.Location = new System.Drawing.Point(98, 309);
+            this.fallasTextBox.Location = new System.Drawing.Point(204, 282);
             this.fallasTextBox.Multiline = true;
             this.fallasTextBox.Name = "fallasTextBox";
-            this.fallasTextBox.Size = new System.Drawing.Size(249, 45);
-            this.fallasTextBox.TabIndex = 2;
+            this.fallasTextBox.Size = new System.Drawing.Size(377, 45);
+            this.fallasTextBox.TabIndex = 6;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEquiposBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(98, 122);
+            this.idTextBox.Location = new System.Drawing.Point(204, 114);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(249, 20);
-            this.idTextBox.TabIndex = 4;
+            this.idTextBox.Size = new System.Drawing.Size(377, 20);
+            this.idTextBox.TabIndex = 8;
             // 
             // marcaTextBox
             // 
             this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEquiposBindingSource, "Marca", true));
-            this.marcaTextBox.Location = new System.Drawing.Point(98, 215);
+            this.marcaTextBox.Location = new System.Drawing.Point(204, 140);
             this.marcaTextBox.Name = "marcaTextBox";
-            this.marcaTextBox.Size = new System.Drawing.Size(249, 20);
-            this.marcaTextBox.TabIndex = 6;
+            this.marcaTextBox.Size = new System.Drawing.Size(377, 20);
+            this.marcaTextBox.TabIndex = 10;
             // 
             // modeloTextBox
             // 
             this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEquiposBindingSource, "Modelo", true));
-            this.modeloTextBox.Location = new System.Drawing.Point(98, 241);
+            this.modeloTextBox.Location = new System.Drawing.Point(204, 187);
             this.modeloTextBox.Name = "modeloTextBox";
-            this.modeloTextBox.Size = new System.Drawing.Size(249, 20);
-            this.modeloTextBox.TabIndex = 8;
+            this.modeloTextBox.Size = new System.Drawing.Size(377, 20);
+            this.modeloTextBox.TabIndex = 12;
             // 
             // noSerieTextBox
             // 
             this.noSerieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEquiposBindingSource, "NoSerie", true));
-            this.noSerieTextBox.Location = new System.Drawing.Point(98, 267);
+            this.noSerieTextBox.Location = new System.Drawing.Point(204, 213);
             this.noSerieTextBox.Name = "noSerieTextBox";
-            this.noSerieTextBox.Size = new System.Drawing.Size(249, 20);
-            this.noSerieTextBox.TabIndex = 10;
+            this.noSerieTextBox.Size = new System.Drawing.Size(377, 20);
+            this.noSerieTextBox.TabIndex = 14;
             // 
-            // button2
+            // precioEstimadoTextBox
             // 
-            this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(574, 369);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 26);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Remover foto";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.precioEstimadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEquiposBindingSource, "PrecioEstimado", true));
+            this.precioEstimadoTextBox.Location = new System.Drawing.Point(761, 591);
+            this.precioEstimadoTextBox.Name = "precioEstimadoTextBox";
+            this.precioEstimadoTextBox.Size = new System.Drawing.Size(104, 20);
+            this.precioEstimadoTextBox.TabIndex = 16;
+            // 
+            // detallesEquipoBindingSource
+            // 
+            this.detallesEquipoBindingSource.AllowNew = false;
+            this.detallesEquipoBindingSource.DataMember = "DetallesEquipo";
+            this.detallesEquipoBindingSource.DataSource = this.listaEquiposBindingSource;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(481, 369);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.button1.Location = new System.Drawing.Point(117, 363);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 26);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Agregar foto";
+            this.button1.Size = new System.Drawing.Size(43, 36);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(176, 363);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 36);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // openFileDialog1
             // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "jpg, png | *.jpg; *png";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // fotoPictureBox
+            // detallesEquipoDataGridView
             // 
-            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaEquiposBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(460, 174);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(204, 169);
-            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPictureBox.TabIndex = 18;
-            this.fotoPictureBox.TabStop = false;
+            this.detallesEquipoDataGridView.AutoGenerateColumns = false;
+            this.detallesEquipoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detallesEquipoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7});
+            this.detallesEquipoDataGridView.DataSource = this.detallesEquipoBindingSource;
+            this.detallesEquipoDataGridView.Location = new System.Drawing.Point(115, 405);
+            this.detallesEquipoDataGridView.Name = "detallesEquipoDataGridView";
+            this.detallesEquipoDataGridView.Size = new System.Drawing.Size(686, 132);
+            this.detallesEquipoDataGridView.TabIndex = 17;
+            this.detallesEquipoDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.detallesEquipoDataGridView_DataError);
             // 
-            // label1
+            // dataGridViewTextBoxColumn2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(179, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 33);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Equipos en el Taller";
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // tiposBLBindingSource
+            // dataGridViewTextBoxColumn4
             // 
-            this.tiposBLBindingSource.DataSource = typeof(BL.Seguridad.TiposBL);
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TecnicoId";
+            this.dataGridViewTextBoxColumn4.DataSource = this.listaTecnicosBindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "Nombre";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tecnico";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "Id";
             // 
-            // tipoIdComboBox
+            // listaTecnicosBindingSource
             // 
-            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaEquiposBindingSource, "TipoId", true));
-            this.tipoIdComboBox.DataSource = this.listaTiposBindingSource;
-            this.tipoIdComboBox.DisplayMember = "Descripcion";
-            this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoIdComboBox.FormattingEnabled = true;
-            this.tipoIdComboBox.Location = new System.Drawing.Point(160, 382);
-            this.tipoIdComboBox.Name = "tipoIdComboBox";
-            this.tipoIdComboBox.Size = new System.Drawing.Size(178, 21);
-            this.tipoIdComboBox.TabIndex = 28;
-            this.tipoIdComboBox.ValueMember = "Id";
+            this.listaTecnicosBindingSource.DataSource = typeof(BL.Seguridad.Tecnico);
             // 
-            // fechaDateTimePicker
+            // dataGridViewTextBoxColumn5
             // 
-            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaEquiposBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(460, 141);
-            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaDateTimePicker.TabIndex = 33;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Fecha";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TipoId";
+            this.dataGridViewTextBoxColumn7.DataSource = this.listaTiposBindingSource;
+            this.dataGridViewTextBoxColumn7.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn7.ValueMember = "Id";
+            // 
+            // listaTiposBindingSource
+            // 
+            this.listaTiposBindingSource.DataSource = typeof(BL.Seguridad.Tipo);
             // 
             // listaClientesBindingSource
             // 
@@ -426,30 +445,55 @@
             this.clienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaEquiposBindingSource, "ClienteId", true));
             this.clienteIdComboBox.DataSource = this.listaClientesBindingSource;
             this.clienteIdComboBox.DisplayMember = "Nombre";
-            this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(98, 174);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(204, 251);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
-            this.clienteIdComboBox.Size = new System.Drawing.Size(249, 21);
-            this.clienteIdComboBox.TabIndex = 34;
+            this.clienteIdComboBox.Size = new System.Drawing.Size(377, 21);
+            this.clienteIdComboBox.TabIndex = 20;
             this.clienteIdComboBox.ValueMember = "Id";
             // 
-            // Nueva1
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(682, 282);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Agregar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(765, 282);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Remover";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // fotoPictureBox
+            // 
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaEquiposBindingSource, "Foto", true));
+            this.fotoPictureBox.Location = new System.Drawing.Point(661, 54);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(192, 179);
+            this.fotoPictureBox.TabIndex = 24;
+            this.fotoPictureBox.TabStop = false;
+            // 
+            // OrdenesEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(740, 567);
+            this.ClientSize = new System.Drawing.Size(902, 631);
+            this.Controls.Add(this.fotoPictureBox);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(clienteIdLabel);
             this.Controls.Add(this.clienteIdComboBox);
-            this.Controls.Add(fechaLabel);
-            this.Controls.Add(this.fechaDateTimePicker);
-            this.Controls.Add(label2);
-            this.Controls.Add(this.tipoIdComboBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.detallesEquipoDataGridView);
             this.Controls.Add(fallasLabel);
             this.Controls.Add(this.fallasTextBox);
             this.Controls.Add(idLabel);
@@ -460,18 +504,22 @@
             this.Controls.Add(this.modeloTextBox);
             this.Controls.Add(noSerieLabel);
             this.Controls.Add(this.noSerieTextBox);
+            this.Controls.Add(precioEstimadoLabel);
+            this.Controls.Add(this.precioEstimadoTextBox);
             this.Controls.Add(this.listaEquiposBindingNavigator);
-            this.Name = "Nueva1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Nueva1_Load);
+            this.Name = "OrdenesEquipos";
+            this.Text = "OrdenesEquipos";
+            this.Load += new System.EventHandler(this.OrdenesEquipos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaEquiposBindingNavigator)).EndInit();
             this.listaEquiposBindingNavigator.ResumeLayout(false);
             this.listaEquiposBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaEquiposBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesEquipoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallesEquipoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTecnicosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,17 +546,23 @@
         private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox modeloTextBox;
         private System.Windows.Forms.TextBox noSerieTextBox;
-        private System.Windows.Forms.ToolStripButton toolStripCancelar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox fotoPictureBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource listaTiposBindingSource;
-        private System.Windows.Forms.BindingSource tiposBLBindingSource;
-        private System.Windows.Forms.ComboBox tipoIdComboBox;
-        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
+        private System.Windows.Forms.TextBox precioEstimadoTextBox;
         private System.Windows.Forms.BindingSource listaClientesBindingSource;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
+        private System.Windows.Forms.BindingSource detallesEquipoBindingSource;
+        private System.Windows.Forms.BindingSource listaTecnicosBindingSource;
+        private System.Windows.Forms.BindingSource listaTiposBindingSource;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView detallesEquipoDataGridView;
         private System.Windows.Forms.ComboBox clienteIdComboBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
     }
 }

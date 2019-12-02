@@ -40,7 +40,6 @@
             this.button13 = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelPlaylistSubMenu = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnOrdenes = new System.Windows.Forms.Button();
             this.btnNuevaOrden = new System.Windows.Forms.Button();
@@ -113,7 +112,7 @@
             this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguridad.ForeColor = System.Drawing.Color.Silver;
             this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeguridad.Location = new System.Drawing.Point(0, 485);
+            this.btnSeguridad.Location = new System.Drawing.Point(0, 459);
             this.btnSeguridad.Name = "btnSeguridad";
             this.btnSeguridad.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnSeguridad.Size = new System.Drawing.Size(250, 45);
@@ -133,7 +132,7 @@
             this.btnTecnicos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTecnicos.ForeColor = System.Drawing.Color.Silver;
             this.btnTecnicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTecnicos.Location = new System.Drawing.Point(0, 432);
+            this.btnTecnicos.Location = new System.Drawing.Point(0, 406);
             this.btnTecnicos.Name = "btnTecnicos";
             this.btnTecnicos.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnTecnicos.Size = new System.Drawing.Size(250, 53);
@@ -150,7 +149,7 @@
             this.panelToolsSubMenu.Controls.Add(this.button12);
             this.panelToolsSubMenu.Controls.Add(this.button13);
             this.panelToolsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 348);
+            this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 322);
             this.panelToolsSubMenu.Name = "panelToolsSubMenu";
             this.panelToolsSubMenu.Size = new System.Drawing.Size(250, 84);
             this.panelToolsSubMenu.TabIndex = 9;
@@ -168,7 +167,7 @@
             this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(250, 40);
             this.button12.TabIndex = 1;
-            this.button12.Text = "Celulares";
+            this.button12.Text = "&Reporte de Ordenes";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
@@ -186,7 +185,7 @@
             this.button13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(250, 40);
             this.button13.TabIndex = 0;
-            this.button13.Text = "Computadoras";
+            this.button13.Text = "&Reporte de Clientes";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -200,7 +199,7 @@
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.ForeColor = System.Drawing.Color.Silver;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 290);
+            this.btnReportes.Location = new System.Drawing.Point(0, 264);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(250, 58);
@@ -214,31 +213,12 @@
             // panelPlaylistSubMenu
             // 
             this.panelPlaylistSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelPlaylistSubMenu.Controls.Add(this.button7);
             this.panelPlaylistSubMenu.Controls.Add(this.button8);
             this.panelPlaylistSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPlaylistSubMenu.Location = new System.Drawing.Point(0, 197);
             this.panelPlaylistSubMenu.Name = "panelPlaylistSubMenu";
-            this.panelPlaylistSubMenu.Size = new System.Drawing.Size(250, 93);
+            this.panelPlaylistSubMenu.Size = new System.Drawing.Size(250, 67);
             this.panelPlaylistSubMenu.TabIndex = 4;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Silver;
-            this.button7.Location = new System.Drawing.Point(0, 45);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(250, 50);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Revisar";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -251,9 +231,9 @@
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(250, 45);
+            this.button8.Size = new System.Drawing.Size(250, 64);
             this.button8.TabIndex = 0;
-            this.button8.Text = "Nueva Orden";
+            this.button8.Text = "&Ordenes";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -272,7 +252,7 @@
             this.btnOrdenes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnOrdenes.Size = new System.Drawing.Size(250, 48);
             this.btnOrdenes.TabIndex = 3;
-            this.btnOrdenes.Text = "&Ordenes de Reparacion";
+            this.btnOrdenes.Text = "&Equipos en el taller";
             this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrdenes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdenes.UseVisualStyleBackColor = true;
@@ -312,7 +292,7 @@
             this.pictureBox1.Image = global::ARYA.Properties.Resources._295128;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(250, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -364,7 +344,6 @@
         private System.Windows.Forms.Panel panelPlayer;
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelPlaylistSubMenu;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnOrdenes;
         private System.Windows.Forms.Button btnNuevaOrden;

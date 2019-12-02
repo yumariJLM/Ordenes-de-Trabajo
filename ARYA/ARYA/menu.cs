@@ -63,20 +63,7 @@ namespace ARYA
            
         }
 
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
-        {
-            if (activeForm != null) activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
+   
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -94,14 +81,14 @@ namespace ARYA
         #region PlayListManagemetSubMenu
         private void button8_Click(object sender, EventArgs e)
         {
-            openChildForm(new Nueva1());
+            openChildForm(new OrdenesEquipos());
             hideSubMenu();
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-        
+           
         }
 
         #endregion
@@ -117,7 +104,8 @@ namespace ARYA
         #region ToolsSubMenu
         private void button13_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new FormReporteClientes());
+            hideSubMenu();
         }
         private void button12_Click(object sender, EventArgs e)
         {
@@ -156,7 +144,20 @@ namespace ARYA
             login();
             
         }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+           childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
-  
+
     }
 }

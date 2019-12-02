@@ -21,12 +21,17 @@ namespace BL.Seguridad
             Database.SetInitializer(new DatosdeInicio());
         }
 
+
+
         public DbSet<Tecnico> Tecnicos { get; set; }
-      
         public DbSet<Tipo> Tipos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Equipo> Equipos  { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Equipo>Equipos { get; set; }
+        public DbSet<DetallesEquipo> Detalles { get; set; }
+
+
+
 
 
 

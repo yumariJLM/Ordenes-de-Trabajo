@@ -37,7 +37,8 @@ namespace BL.Seguridad
             tecnico1.Nombre = "Kevin Valladares";
             tecnico1.Telefono = "345324643";
             tecnico1.Direccion = "Sps 3 calle 4 ave.";
-            tecnico1.Tipo = Tipo1;
+            tecnico1.CorreoElectronico = "kvls@gmail.com";
+
             contexto.Tecnicos.Add(tecnico1);
 
 
@@ -45,8 +46,9 @@ namespace BL.Seguridad
             tecnico2.Nombre = "Carlos Lopez";
             tecnico2.Telefono = "99298990";
             tecnico2.Direccion = "Sps Barrio Medina 2 calle";
-            tecnico2.Tipo = Tipo2;
+            tecnico2.CorreoElectronico = "robt@gmail.com";
             contexto.Tecnicos.Add(tecnico2);
+
 
             base.Seed(contexto);
 
